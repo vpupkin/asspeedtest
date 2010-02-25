@@ -7,6 +7,7 @@ import static org.junit.Assert.assertNotNull;
 import java.util.Collection;
 
 import net.kindleit.gae.example.model.Message;
+import net.kindleit.gae.example.server.MessageRepository;
 
 import org.junit.After;
 import org.junit.Before;
