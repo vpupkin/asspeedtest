@@ -1,5 +1,6 @@
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Date;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -42,7 +43,7 @@ public class SpeedTest extends HttpServlet implements SingleThreadModel{
 			 response.addHeader( "Cache-Control", "must-revalidate" );
 			 response.addHeader( "Cache-Control", "no-cache" );
 			 response.addHeader( "Cache-Control", "no-store" );
-			 response.setDateHeader("Expires", 0);
+			 response.setDateHeader("Expires", new Date().getTime() + ((-1)*1000*60*60*24*365*1000));
 			 response.setContentType("text/html;charset=utf-8");
 
 			 String cmd=request.getParameter("cmd");
